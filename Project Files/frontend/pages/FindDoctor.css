@@ -1,0 +1,36 @@
+/* FindDoctor.css - Custom styles for FindDoctor page */
+
+.find-doctor-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 40px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  padding: 60px 20px 40px;
+  text-align: center;
+  color: white;
+  margin-bottom: 32px;
+}
+
+.hero-section .ant-typography {
+  color: white !important;
+}
+
+.filters-row {
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  padding: 0 20px;
+}
+
+.doctor-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.doctor-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+} 

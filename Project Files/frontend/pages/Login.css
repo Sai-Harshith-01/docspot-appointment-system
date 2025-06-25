@@ -1,0 +1,65 @@
+/* Simple, user-friendly background for auth pages */
+.login-bg-animated {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f4f9ff 100%);
+}
+
+.login-bubbles {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+.bubble1 {
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  top: 10%;
+  left: 12%;
+  animation: bubbleFloat1 12s ease-in-out infinite alternate;
+}
+.bubble2 {
+  width: 160px;
+  height: 160px;
+  background: #a0c4ff;
+  bottom: 8%;
+  right: 10%;
+  animation: bubbleFloat2 10s ease-in-out infinite alternate;
+}
+.bubble3 {
+  width: 120px;
+  height: 120px;
+  background: #4f8cff;
+  top: 60%;
+  left: 70%;
+  animation: bubbleFloat3 14s ease-in-out infinite alternate;
+}
+@keyframes bubbleFloat1 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.1); }
+}
+@keyframes bubbleFloat2 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(30px) scale(1.08); }
+}
+@keyframes bubbleFloat3 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.12); }
+} 
