@@ -116,6 +116,4 @@ npx nodemon index.js
 * **dotenv** – Manage environment variables
 * **bcryptjs** – Password hashing
 
----
 
-Let me know if you'd like this exported as a `.md` file or extended with testing/deployment instructions!
