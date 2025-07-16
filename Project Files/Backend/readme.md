@@ -1,7 +1,12 @@
-Backend Setup Guide – Healthcare Appointment System
-This is the Express.js + MongoDB backend for the Healthcare Appointment System, which provides APIs for user authentication, doctor registration, appointment booking, and admin control.
+ Backend Setup Guide – Healthcare Appointment System
 
-📁 Backend Folder Structure
+This is the **Express.js + MongoDB backend** for the Healthcare Appointment System, which provides APIs for user authentication, doctor registration, appointment booking, and admin control.
+
+---
+
+## 📁 Backend Folder Structure
+
+```
 backend/
 │
 ├── .env                         # Environment variables (PORT, DB URI, JWT_SECRET)
@@ -29,73 +34,88 @@ backend/
 │
 ├── uploads/                    # Folder for file uploads (e.g., profile pictures)
 └── .gitignore
-🚀 Key Functionalities
-🔐 JWT Authentication with role-based access control
+```
 
-👨‍⚕️ Doctor Application Flow with admin approval
+---
 
-📅 Appointment Booking System
+## 🚀 Key Functionalities
 
-⚙️ Admin Dashboard APIs (manage users, doctors)
+* 🔐 **JWT Authentication** with role-based access control
+* 👨‍⚕️ **Doctor Application Flow** with admin approval
+* 📅 **Appointment Booking System**
+* ⚙️ **Admin Dashboard APIs** (manage users, doctors)
+* 🛡️ **Middleware-based Route Protection**
 
-🛡️ Middleware-based Route Protection
+---
 
-▶️ Steps to Run the Backend
-1️⃣ Navigate to the Backend Directory
-bash
-Copy
-Edit
+## ▶️ Steps to Run the Backend
+
+### 1️⃣ Navigate to the Backend Directory
+
+```bash
 cd backend
-2️⃣ Install Dependencies
-bash
-Copy
-Edit
-npm install
-3️⃣ Configure Environment Variables
-Create a .env file in the backend/ directory with the following:
+```
 
-env
-Copy
-Edit
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the `backend/` directory with the following:
+
+```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/your_database_name
 JWT_SECRET=your_jwt_secret_key
-Replace your_database_name and your_jwt_secret_key with actual values.
+```
 
-4️⃣ Start the Backend Server
-bash
-Copy
-Edit
+> Replace `your_database_name` and `your_jwt_secret_key` with actual values.
+
+### 4️⃣ Start the Backend Server
+
+```bash
 node index.js
 # OR, for development (auto-reload):
 npx nodemon index.js
-🌐 API Endpoints Overview
-Endpoint	Method	Role	Description
-/api/user/register	POST	Public	Register new user
-/api/user/login	POST	Public	Login & get JWT
-/api/user/apply-doctor	POST	User	Apply as a doctor
-/api/admin/get-users	GET	Admin	Get list of all users
-/api/admin/update-status	POST	Admin	Approve or reject doctor application
-/api/doctor/appointments	GET	Doctor	View appointments
+```
 
-🔐 All protected routes require a valid JWT token in the Authorization header.
+---
 
-💡 Helpful Tips
-Make sure MongoDB is running locally or use MongoDB Atlas.
+## 🌐 API Endpoints Overview
 
-Use tools like Postman or Thunder Client for API testing.
+| Endpoint                   | Method | Role   | Description                          |
+| -------------------------- | ------ | ------ | ------------------------------------ |
+| `/api/user/register`       | POST   | Public | Register new user                    |
+| `/api/user/login`          | POST   | Public | Login & get JWT                      |
+| `/api/user/apply-doctor`   | POST   | User   | Apply as a doctor                    |
+| `/api/admin/get-users`     | GET    | Admin  | Get list of all users                |
+| `/api/admin/update-status` | POST   | Admin  | Approve or reject doctor application |
+| `/api/doctor/appointments` | GET    | Doctor | View appointments                    |
 
-Use console.log() or install morgan for HTTP request logging.
+> 🔐 All protected routes require a valid JWT token in the `Authorization` header.
 
-📘 Tech Stack Used
-Express.js – Web framework
+---
 
-MongoDB + Mongoose – Database
+## 💡 Helpful Tips
 
-JWT – Authentication
+* Make sure MongoDB is running locally or use MongoDB Atlas.
+* Use tools like **Postman** or **Thunder Client** for API testing.
+* Use `console.log()` or install `morgan` for HTTP request logging.
 
-Multer – File upload support
+---
 
-dotenv – Manage environment variables
+## 📘 Tech Stack Used
 
-bcryptjs – Password hashing
+* **Express.js** – Web framework
+* **MongoDB + Mongoose** – Database
+* **JWT** – Authentication
+* **Multer** – File upload support
+* **dotenv** – Manage environment variables
+* **bcryptjs** – Password hashing
+
+---
+
+Let me know if you'd like this exported as a `.md` file or extended with testing/deployment instructions!
