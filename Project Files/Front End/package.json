@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sai-harshith-01.github.io/docspot-appointment-system/",
+  "homepage": "http://localhost:3000/",
   "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
