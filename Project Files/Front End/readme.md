@@ -1,6 +1,8 @@
--- Doctor’s Appointment System – Frontend Setup Guide
+Doctor’s Appointment System – Frontend Setup Guide
 
-This is the **React.js** frontend for the Doctor's Appointment System, built to interact seamlessly with the Express backend. It includes functionality for patients, doctors, and admins, with dynamic routing, protected pages, and real-time updates via API integration.
+This is the **React.js frontend** for the **Doctor's Appointment System**, built to interact seamlessly with the Express backend. It supports patients, doctors, and admins with dynamic routing, protected pages, and real-time API integration.
+
+---
 
 ## 📁 Project Structure Overview
 
@@ -27,18 +29,18 @@ frontend/
 
 ## 🚀 Key Frontend Features
 
-* 🔐 **Login/Register** (Users, Doctors, Admins)
-* 🩺 **Doctor Application** form and status view
-* 📅 **Book & View Appointments**
-* ⚙️ **Admin Management Panel**
-* 🧭 **Role-based Routing** with Protected Routes
-* 📲 **API integration** with JWT support (Axios)
+- 🔐 **Login/Register** (Users, Doctors, Admins)  
+- 🩺 **Doctor Application Form** and Status View  
+- 📅 **Book & View Appointments**  
+- ⚙️ **Admin Management Panel**  
+- 🧭 **Role-based Routing** with Protected Routes  
+- 📲 **API Integration** with JWT Support (Axios)  
 
 ---
 
 ## ▶️ How to Set Up the Frontend
 
-### 1️⃣ Go to the Frontend Directory
+### 1️⃣ Navigate to the Frontend Directory
 
 ```bash
 cd frontend
@@ -58,7 +60,7 @@ Create a `.env` file in the `frontend/` directory:
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-> Replace `http://localhost:5000` with your backend base URL if different (e.g., production URL).
+> Replace `http://localhost:5000` with your actual backend base URL if running in production.
 
 ### 4️⃣ Start the React App
 
@@ -66,34 +68,36 @@ REACT_APP_API_URL=http://localhost:5000
 npm start
 ```
 
-This runs the app in development mode at:
-🌐 `http://localhost:3000`
+The app will start in development mode and open at:  
+🌐 [http://localhost:3000](http://localhost:3000)
 
-The app will reload automatically on code changes.
+> The app supports **hot reloading**, so it refreshes automatically on changes.
 
 ---
 
 ## 🌐 API Integration
 
-* All API requests use `Axios`, configured in `axios.js`
-* JWT is attached via `Authorization: Bearer <token>` headers
-* Auth tokens are stored in `localStorage`
+- All API requests are handled using **Axios** (`src/axios.js`)
+- JWT tokens are included via `Authorization: Bearer <token>` headers
+- Tokens are stored in `localStorage` and managed via Context API
 
 ---
 
 ## 🔧 Tech Stack
 
-| Tool               | Purpose                       |
-| ------------------ | ----------------------------- |
-| React              | Frontend UI                   |
-| React Router       | Client-side routing           |
-| Axios              | HTTP requests to backend APIs |
-| JWT                | Authentication                |
-| Context API        | Global auth & user state      |
-| Tailwind CSS / CSS | Styling framework             |
+| Tool          | Purpose                                |
+| ------------- | -------------------------------------- |
+| **React**     | Frontend framework                     |
+| **React Router** | Client-side routing                |
+| **Axios**     | HTTP requests to backend APIs          |
+| **JWT**       | Secure authentication                  |
+| **Context API** | Global auth & user state management |
+| **Tailwind CSS** / CSS | Styling for the UI           |
 
 ---
 
----
+## 🧪 Tips
 
-
+- Always run the backend before starting the frontend to avoid CORS/API issues.
+- Check browser console/network tab for any failed requests or 401 errors.
+- Customize the API base URL from `.env` if deploying.
