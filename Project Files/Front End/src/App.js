@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -13,7 +13,7 @@ import DoctorPublicProfile from './pages/DoctorPublicProfile';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -27,7 +27,7 @@ function App() {
           {adminRoutes}
         </Routes>
       </AppLayout>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
