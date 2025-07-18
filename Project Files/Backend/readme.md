@@ -1,10 +1,3 @@
-Sure! Here's your full `README.md` file **just for the backend** of the Doctor Appointment Booking App. It's written cleanly and professionally so you can directly place this inside your `backend/` folder or include it in your main repo.
-
----
-
-### ✅ Final `backend/README.md`
-
-```markdown
 # 🩺 Doctor Appointment Booking App – Backend
 
 This is the **backend API** for the Doctor Appointment Booking System. It manages users, doctors, appointments, and admin functionalities using **Node.js**, **Express**, and **MongoDB**.
