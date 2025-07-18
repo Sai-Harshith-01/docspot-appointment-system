@@ -126,8 +126,6 @@ Outputs a static build in the `build/` folder.
 
 ---
 
-## 📬 Contact
 
-For any issues, please raise an issue in the repository or contact the maintainer.
 
 
